@@ -288,11 +288,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 30px;
 }
 .voice .voice1 .voice-middle {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  gap: 30px;
+}
+.voice .voice1 .voice-middle .voice-text {
+  margin-left: auto;
 }
 .voice .voice1 .voice-left-img, .voice .voice1 .voice-right-img {
   display: flex;
@@ -314,4 +319,10 @@
 }
 .voice .voice1 .voice-img img {
   height: 120px;
+}
+.voice .voice1 .voice-text {
+  width: 80%;
+  padding: 20px;
+  background-color: #E9F1FB;
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */

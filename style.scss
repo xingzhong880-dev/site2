@@ -298,11 +298,16 @@ $color: #FF2A2A;
             display: flex;
             flex-direction: row;
             align-items: center;
+            gap: 30px;
         }
         .voice-middle{
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
+            gap: 30px;
+            .voice-text{
+                margin-left: auto;
+            }
         }
         .voice-left-img,.voice-right-img{
             display: flex;
@@ -325,6 +330,12 @@ $color: #FF2A2A;
             img {
                 height: 120px;
             }
+        }
+        .voice-text{
+            width: 80%;
+            padding: 20px;
+            background-color: #E9F1FB;
+            border-radius: 15px;
         }
     }
 }

@@ -111,10 +111,11 @@ updateSlider(false);
 let autoSlideTimer;
 
 function startAutoSlide() {
+    clearInterval(autoSlideTimer);
     autoSlideTimer = setInterval(() => {
         sliderIndex++;
         updateSlider();
-    }, 5000);
+    }, 4000);
 }
 
 function resetAutoSlide() {

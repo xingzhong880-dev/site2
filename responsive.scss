@@ -22,8 +22,9 @@
     }
     .pickup{
         .image-slider{
+            padding: 0 15vw 80px;
             .slider-item {
-                flex: 0 0 calc(100% / 1.4);
+                flex: 0 0 100%;
             }
         }
     }

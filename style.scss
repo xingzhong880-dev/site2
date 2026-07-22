@@ -233,12 +233,12 @@ $color: #FF2A2A;
         width: 100%;       
         margin: 0 auto;
         overflow: hidden;
-        padding-bottom: 80px;
+        padding: 0 8vw 80px;
         .slider-track {
             display: flex;
         }
         .slider-item {
-            flex: 0 0 calc(100% / 3.6);
+            flex: 0 0 calc(100% / 3);
             padding: 0 2vw;
             img {
                 width: 100%;

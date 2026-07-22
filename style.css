@@ -221,13 +221,13 @@
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 80px;
+  padding: 0 8vw 80px;
 }
 .pickup .image-slider .slider-track {
   display: flex;
 }
 .pickup .image-slider .slider-item {
-  flex: 0 0 27.7777777778%;
+  flex: 0 0 33.3333333333%;
   padding: 0 2vw;
 }
 .pickup .image-slider .slider-item img {

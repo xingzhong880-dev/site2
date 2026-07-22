@@ -52,7 +52,7 @@ const nextBtn = document.querySelector(".slider-arrow.next");
 const totalItems = originalItems.length;
 
 function getItemsPerView() {
-    return window.innerWidth <= 1000 ? 1.4 : 3.6;
+    return window.innerWidth <= 1000 ? 1 : 3;
 }
 
 let itemsPerView = getItemsPerView();

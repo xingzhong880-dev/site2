@@ -259,6 +259,29 @@
 .pickup .image-slider .slider-arrow.next {
   right: 20px;
 }
+.pickup .slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.pickup .slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #CCCCCC;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.pickup .slider-dots .dot:hover {
+  background-color: rgb(165.75, 165.75, 165.75);
+}
+.pickup .slider-dots .dot.is-active {
+  background-color: #FF2A2A;
+  transform: scale(1.2); /* 現在の位置を少し大きく強調 */
+}
 
 .title2 {
   padding: 100px 0 50px 0;

@@ -48,6 +48,7 @@ const track = document.querySelector(".slider-track");
 const originalItems = document.querySelectorAll(".slider-item");
 const prevBtn = document.querySelector(".slider-arrow.prev");
 const nextBtn = document.querySelector(".slider-arrow.next");
+const slider = document.querySelector(".image-slider");
 
 const totalItems = originalItems.length;
 
@@ -67,24 +68,75 @@ firstClones.forEach(clone => track.appendChild(clone));
 let itemWidth = 100 / itemsPerView;
 let sliderIndex = cloneCount;
 
+/* ドット生成 */
+const dotsContainer = document.createElement("div");
+dotsContainer.classList.add("slider-dots");
+slider.insertAdjacentElement("afterend", dotsContainer);
+
+for (let i = 0; i < totalItems; i++) {
+    const dot = document.createElement("button");
+    dot.classList.add("dot");
+    dot.setAttribute("aria-label", `${i + 1}枚目の画像へ`);
+    dotsContainer.appendChild(dot);
+}
+
+const dots = dotsContainer.querySelectorAll(".dot");
+
+function updateDots() {
+    const realIndex = (sliderIndex - cloneCount + totalItems) % totalItems;
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === realIndex);
+    });
+}
+
+dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+        sliderIndex = cloneCount + i;
+        updateSlider();
+        resetAutoSlide();
+    });
+});
+
 function updateSlider(withTransition = true) {
     track.style.transition = withTransition ? "transform 0.5s ease" : "none";
     track.style.transform = `translateX(-${sliderIndex * itemWidth}%)`;
     if (!withTransition) {
         track.offsetHeight;
     }
+    updateDots();
 }
 
 updateSlider(false);
 
+let autoSlideTimer;
+
+function startAutoSlide() {
+    autoSlideTimer = setInterval(() => {
+        sliderIndex++;
+        updateSlider();
+    }, 5000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideTimer);
+    startAutoSlide();
+}
+
+startAutoSlide();
+
+slider.addEventListener("mouseenter", () => clearInterval(autoSlideTimer));
+slider.addEventListener("mouseleave", startAutoSlide);
+
 nextBtn.addEventListener("click", () => {
     sliderIndex++;
     updateSlider();
+    resetAutoSlide();
 });
 
 prevBtn.addEventListener("click", () => {
     sliderIndex--;
     updateSlider();
+    resetAutoSlide();
 });
 
 track.addEventListener("transitionend", () => {
@@ -103,7 +155,7 @@ window.addEventListener("resize", () => {
     if (newItemsPerView !== itemsPerView) {
         itemsPerView = newItemsPerView;
         itemWidth = 100 / itemsPerView;
-        sliderIndex = cloneCount; 
+        sliderIndex = cloneCount;
         updateSlider(false);
     }
 });
@@ -124,6 +176,7 @@ function dragStart(clientX) {
     startX = clientX;
     startTranslate = getTranslateX();
     track.style.transition = "none";
+    clearInterval(autoSlideTimer);
 }
 
 function dragMove(clientX) {
@@ -148,6 +201,7 @@ function dragEnd() {
     }
 
     updateSlider();
+    startAutoSlide();
 }
 
 track.addEventListener("mousedown", (e) => {

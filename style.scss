@@ -270,6 +270,32 @@ $color: #FF2A2A;
             }
         }
     }
+    .slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #CCCCCC;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            background-color: darken(#CCCCCC, 15%);
+        }
+
+        &.is-active {
+            background-color: $color;
+            transform: scale(1.2); /* 現在の位置を少し大きく強調 */
+        }
+    }
+}
 }
 .title2{
     padding: 100px 0 50px 0;

@@ -281,11 +281,11 @@ $color: #FF2A2A;
 .reason{
     .reason1{
         background-color: $color;
-        height: 600px;
         display: flex;
         flex-direction: column;
         padding: 100px 0;
         .reason-top,.reason-bottom{
+            padding: 5vw 0;
             width: 50%;
             height: 50%;
             display: flex;
@@ -312,14 +312,14 @@ $color: #FF2A2A;
         .reason-top{
             justify-content: flex-end;
             margin-bottom: 40px;
-            padding-right: 10%;
+            padding-right: 10vw;
             border-radius: 0 20px 20px 0;
             transform: translateX(-100%);
         }
         .reason-bottom {
             justify-content: flex-start;
             margin-left: auto;
-            padding-left: 10%;
+            padding-left: 10vw;
             border-radius: 20px 0 0 20px;
             transform: translateX(100%);
         }

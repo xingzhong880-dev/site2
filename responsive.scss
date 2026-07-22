@@ -1,0 +1,117 @@
+@media screen and (max-width: 1000px){
+    .introduction{
+        flex-direction: column-reverse;
+        align-items: stretch;
+        .title{
+            margin:0;
+            .title-text{
+                font-size: 28px;
+            }
+            .title-btn{
+                margin-top: 10px;
+                width: 100%;
+                text-align: center;
+                position: relative;
+                padding: 15px 0;
+            }
+        }
+        .hero-slideshow {
+            width:100%;
+            height: 300px;
+        }
+    }
+    .pickup{
+        .image-slider{
+            .slider-item {
+                flex: 0 0 calc(100% / 1.4);
+            }
+        }
+    }
+    .title2{
+        padding: 50px 0 30px 0;
+        font-size: 28px;
+    }
+    .reason{
+        .reason1{
+            padding: 50px 0;
+            .reason-top,.reason-bottom{
+                width: 97%;
+                justify-content: center;
+                padding: 40px 0;
+                .reason-text{
+                    h2{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .voice{
+        .voice1{
+            width: 100%;
+            .voice-text{
+                width: 100%;
+                text-align: center;
+            }
+            .voice-top,
+            .voice-middle,
+            .voice-bottom{
+                flex-direction: column-reverse;
+                .voice-text::before {
+                    top: auto;
+                    bottom: -15px;
+                    left: 50%;
+                    right: auto;
+                    transform: translateX(-50%);
+                    border-width: 15px 15px 0 15px;
+                    border-color: #E9F1FB transparent transparent transparent;
+                }
+                .voice-text{
+                    margin: 0 auto;
+                }
+            }
+            .voice-top-text,
+            .voice-middle-text,
+            .voice-bottom-text{
+                width: 97%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .overview{
+        .overview1{
+            justify-content: center;
+            .overview-menu{
+                width: 95%;
+                h2{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .call{
+        width: 100%;
+        padding: 100px 3vw;
+    }
+    footer{
+        .bottom{
+            width: 100%;
+            flex-wrap: wrap;
+            padding: 50px 3vw;
+            .bottom1{
+                width: 50%;
+                margin-bottom: 30px;
+                .bottom1-title{
+                    font-size: 15px;
+                }
+                a{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

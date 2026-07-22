@@ -1,1 +1,107 @@
-/*# sourceMappingURL=responsive.css.map */
+@media screen and (max-width: 1000px) {
+  .introduction {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+  .introduction .title {
+    margin: 0;
+  }
+  .introduction .title .title-text {
+    font-size: 28px;
+  }
+  .introduction .title .title-btn {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 15px 0;
+  }
+  .introduction .hero-slideshow {
+    width: 100%;
+    height: 300px;
+  }
+  .pickup .image-slider .slider-item {
+    flex: 0 0 71.4285714286%;
+  }
+  .title2 {
+    padding: 50px 0 30px 0;
+    font-size: 28px;
+  }
+  .reason .reason1 {
+    padding: 50px 0;
+  }
+  .reason .reason1 .reason-top, .reason .reason1 .reason-bottom {
+    width: 97%;
+    justify-content: center;
+    padding: 40px 0;
+  }
+  .reason .reason1 .reason-top .reason-text h2, .reason .reason1 .reason-bottom .reason-text h2 {
+    font-size: 24px;
+  }
+  .voice .voice1 {
+    width: 100%;
+  }
+  .voice .voice1 .voice-text {
+    width: 100%;
+    text-align: center;
+  }
+  .voice .voice1 .voice-top,
+  .voice .voice1 .voice-middle,
+  .voice .voice1 .voice-bottom {
+    flex-direction: column-reverse;
+  }
+  .voice .voice1 .voice-top .voice-text::before,
+  .voice .voice1 .voice-middle .voice-text::before,
+  .voice .voice1 .voice-bottom .voice-text::before {
+    top: auto;
+    bottom: -15px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    border-width: 15px 15px 0 15px;
+    border-color: #E9F1FB transparent transparent transparent;
+  }
+  .voice .voice1 .voice-top .voice-text,
+  .voice .voice1 .voice-middle .voice-text,
+  .voice .voice1 .voice-bottom .voice-text {
+    margin: 0 auto;
+  }
+  .voice .voice1 .voice-top-text,
+  .voice .voice1 .voice-middle-text,
+  .voice .voice1 .voice-bottom-text {
+    width: 97%;
+    display: flex;
+    justify-content: center;
+  }
+  .overview .overview1 {
+    justify-content: center;
+  }
+  .overview .overview1 .overview-menu {
+    width: 95%;
+  }
+  .overview .overview1 .overview-menu h2 {
+    font-size: 24px;
+  }
+  .overview .overview1 .overview-menu p {
+    font-size: 16px;
+  }
+  .call {
+    width: 100%;
+    padding: 100px 3vw;
+  }
+  footer .bottom {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 50px 3vw;
+  }
+  footer .bottom .bottom1 {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  footer .bottom .bottom1 .bottom1-title {
+    font-size: 15px;
+  }
+  footer .bottom .bottom1 a {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=responsive.css.map */
